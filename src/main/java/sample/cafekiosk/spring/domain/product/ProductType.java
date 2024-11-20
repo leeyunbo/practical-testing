@@ -18,5 +18,4 @@ public enum ProductType {
     public static boolean containsStockType(ProductType type) {
         return List.of(BOTTLE, BAKERY).contains(type);
     }
-
 }

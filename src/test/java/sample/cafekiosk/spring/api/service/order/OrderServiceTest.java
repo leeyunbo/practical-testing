@@ -43,6 +43,9 @@ class OrderServiceTest {
     @Autowired
     private OrderService orderService;
 
+    @Autowired
+    private StockRepository stockRepository;
+
     @AfterEach
     void tearDown() {
         orderProductRepository.deleteAllInBatch();
@@ -183,7 +186,6 @@ class OrderServiceTest {
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessage("재고가 부족한 상품이 있습니다.");
     }
-
 
     private Product createProduct(ProductType type, String productNumber, int price) {
         return Product.builder()

@@ -47,5 +47,4 @@ public class Stock extends BaseEntity {
         }
         this.quantity -= quantity;
     }
-
 }
